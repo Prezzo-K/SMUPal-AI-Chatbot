@@ -1,0 +1,41 @@
+# Site settings
+title: Engagement Accelerated AI Chatbot
+subtitle: by Abdiaziz Muse
+email: info@smu.ca
+description: Welcome to your SMU virtual assistant.<br /> I am here to help you navigate student life, academics, and everything in between.
+baseurl: "user08" # the subpath of your site, e.g., /blog
+url: # the base hostname & protocol for your site
+author:
+street_address: 923 Robie Street
+city: Halifax
+state: NS
+zip_code: B3H3C3
+country: Canada
+phone: (716) 555-5555
+
+# Homepage tiles
+tiles-source: pages # accepts "posts" or "pages"
+tiles-count: 6
+
+# Social settings (key must match the name of Font Awesome icon)
+# Icons are not shown if the value is empty
+# You need to restart Jekyll for changes to take effect
+socials:
+  Globe: https://www.smu.ca
+  Instagram: https://www.instagram.com/smuhalifax/
+  LinkedIn: https://www.linkedin.com/school/smuhalifax/posts/?feedView=all
+  Twitter: https://x.com/smuhalifax
+  Facebook: https://www.facebook.com/smuhalifax
+  Slack:
+
+# Build settings
+markdown: kramdown
+
+sass:
+  style: compressed
+
+exclude:
+  - "*.gemspec"
+  - LICENSE.md
+  - CONTRIBUTING.md
+  - README.md

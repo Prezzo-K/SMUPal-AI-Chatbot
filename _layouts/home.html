@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+{% include head.html %}
+
+<body>
+
+    {% include header.html %}
+
+    <!-- Banner -->
+    <section id="banner" class="major">
+        <div class="inner">
+            <header class="major">
+                <h1>{{ page.landing-title }}</h1>
+            </header>
+            <div class="content">
+                <p style="text-transform: uppercase;">{{ site.description }}</p>
+                <ul class="actions">
+                    <li><a href="#one" class="button next scrolly">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- One -->
+        {% include tiles.html %}
+
+        <!-- Two -->
+        <section id="two">
+            <div class="inner">
+                <header class="major">
+                    <h2>Massa libero</h2>
+                </header>
+                <p>{{ content }}</p>
+                <ul class="actions">
+                    <li><a href="landing.html" class="button next">Get Started</a></li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    {% include footer.html %}
+<!--
+  <script>
+window.watsonAssistantChatOptions = {
+ integrationID: "f1efb935-f571-4210-962c-7920ec52df19",
+ region: "aws-us-east-1",
+ serviceInstanceID: "20241102-1216-2844-5062-615d243d7f1e",
+ onLoad: async (instance) => {await instance.render();}
+};
+
+setTimeout(function(){
+const t = document.createElement('script');
+t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+	(window.watsonAssistantChatOptions.clientVersion || 'latest') +
+	"/WatsonAssistantChatEntry.js";
+document.head.appendChild(t);
+},0);
+
+ </script>
+-->
+
+</body>
+
+</html>
