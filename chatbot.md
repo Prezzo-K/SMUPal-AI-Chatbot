@@ -1,7 +1,7 @@
 ---
 layout: page
 title: SMUPal
-description: Your SMUPal Assistant is here to you  help with any question you have.
+description: Your SMUPal Assistant is here to you help with any question you have.
 image: assets/images/chatbot.png
 nav-menu: true
 ---
