@@ -1,66 +1,90 @@
-# Forty - Jekyll Theme
+# SMUPal Chatbot
 
-A Jekyll version of the "Forty" theme by [HTML5 UP](https://html5up.net/).  
+## Overview
+SMUPal is an AI chatbot designed to assist students and the broader community at Saint Mary's University (SMU). The chatbot provides clear, empathetic, and accessible guidance on a variety of university-related topics, including campus resources, academic support, student life, and more.
 
-![Forty Theme](assets/images/forty.jpg "Forty Theme")
+SMUPal is trained on a curated dataset obtained from the Saint Mary's University website and the Saint Mary's University Students' Association (SMUSA). It utilizes keyword recognition, encouragement-based responses, and resource-based guidance to create an effective, student-friendly AI assistant. The chatbot is powered by IBM Watsonx Orchestrate and is currently hosted on a static website generated with Jekyll for demonstration purposes.
 
-# How to Use
+## Features
+- **Student-Oriented Design**: Tailored to meet the needs of students, providing both academic and emotional support.
+- **SMU-Specific Knowledge**: Trained with customized data relevant to Saint Mary's University.
+- **Human Agent Integration**: Allows users to connect with university staff or support services when necessary.
+- **Multilingual Support**: Supports multiple languages, including English, Chinese, and Japanese.
+- **Watsonx AI Technology**: Powered by IBM Watsonx Orchestrate for accurate and responsive AI interactions.
+- **User-Friendly Interface**: Intuitive design with buttons for quick responses and a text input field for custom queries.
+- **Emotional Support**: Provides guidance on common student concerns, such as exam stress and mental well-being.
 
-For those unfamiliar with how Jekyll works, check out [jekyllrb.com](https://jekyllrb.com/) for all the details, 
-or read up on just the basics of [front matter](https://jekyllrb.com/docs/frontmatter/), [writing posts](https://jekyllrb.com/docs/posts/), 
-and [creating pages](https://jekyllrb.com/docs/pages/).
+## Current Training Data
+SMUPal is currently trained on a limited dataset for demonstration purposes, including:
+- SMUSA resources
+- "New to SMU" program information
+- On-campus job opportunities
+- On-campus dining options
+- Residence resources
+- Comprehensive details on first-year Computer Science courses at SMU
+- Basic general question-answering capabilities
 
-Simply fork this repository and start editing the `_config.yml` file!
+## Installation & Deployment
+### Prerequisites
+- Python 3.8+
+- IBM Watsonx Orchestrate API credentials
+- Jekyll (for static site deployment)
 
-> NOTE: GitHub Actions is required to deploy to GitHub Pages because GitHub [refuses to update their version of Jekyll](https://github.com/github/pages-gem/issues/651).
+### Setup Instructions
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-repository/smupal.git
+   cd smupal
+   ```
 
-# Added Features
+2. **Install dependencies:**
+   ```sh
+   pip install -r requirements.txt
+   ```
 
-* **[Formspree.io](https://formspree.io/) contact form integration** - just add your email to the `_config.yml` and it works!
-* Use `_config.yml` to **set whether the homepage tiles should pull pages or posts**, as well as how many to display.
-* Add your **social profiles** easily in `_config.yml`. Only social profiles buttons you enter in `config.yml` show up on the site footer!
-* Set **featured images** in front matter.
+3. **Set up IBM Watsonx API credentials:**
+   - Create an `.env` file in the root directory and add your API keys:
+     ```sh
+     IBM_API_KEY=your_api_key_here
+     IBM_SERVICE_URL=your_service_url_here
+     ```
 
-# Credits
+4. **Run the chatbot locally:**
+   ```sh
+   python chatbot.py
+   ```
 
-Original README from HTML5 UP:
+5. **Deploy on Jekyll-based static website:**
+   - Ensure Jekyll is installed:
+     ```sh
+     gem install jekyll bundler
+     ```
+   - Build the website:
+     ```sh
+     jekyll build
+     ```
+   - Serve the website:
+     ```sh
+     jekyll serve
+     ```
 
-```
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+## Usage Guide
+1. Visit the chatbot webpage.
+2. Use the interactive buttons for quick questions or type your query into the chat field.
+3. Receive relevant responses or be guided to appropriate resources.
+4. If needed, escalate your query to a human agent through the chatbot.
 
+## Future Improvements
+- Expanding training data to cover more SMU-related topics.
+- Integrating additional AI-powered features for improved contextual understanding.
+- Deploying on a permanent server with increased stability and performance.
+- Enhancing multilingual support with additional languages.
+- Improving chatbot personalization based on user preferences.
 
-This is Forty, my latest and greatest addition to HTML5 UP and, per its incredibly
-creative name, my 40th (woohoo)! It's built around a grid of "image tiles" that are
-set up to smoothly transition to secondary landing pages (for which a separate page
-template is provided), and includes a number of neat effects (check out the menu!),
-extra features, and all the usual stuff you'd expect. Hope you dig it!
+## Contributors
+- **Abdiaziz Muse**
+- **Yilin Huang**
+- **Muhammad Shaheer**
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
-
-(* = not included)
-
-AJ
-aj@lkn.io | @ajlkn
-
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
-
-	Other:
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		background-size polyfill (github.com/louisremi)
-		Misc. Sass functions (@HugoGiraudel)
-		Respond.js (j.mp/respondjs)
-		Skel (skel.io)
-```
-
-Repository [Jekyll logo](https://github.com/jekyll/brand) icon licensed under a [Creative Commons Attribution 4.0 International License](http://choosealicense.com/licenses/cc-by-4.0/).
+## Acknowledgments
+SMUPal was developed as part of the IBM Watsonx Education Challenge, where it won second place. Special thanks to IBM and SMU for their support in this initiative.
